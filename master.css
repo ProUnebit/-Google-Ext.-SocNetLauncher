@@ -1,38 +1,27 @@
-body {
-    margin: 0;
-    padding: 0;
-}
 
 .wrapper {
     width: 400px;
-    height: 150px;
+    min-height: 400px;
+    overflow-x: hidden;
     background-color: whitesmoke;
 }
 
 .modal-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    color: #eb6864;
+    cursor: default;
 }
 
-.modal-header__main-title {
-    color: pink;
+.modal-header > img {
+    width: 40px;
+    height: 40px;
 }
 
-.modal-header__button {
-    width: 100px;
-    height: 35px;
-    font-size: 16px;
-    text-align: center;
-    color: pink;
+.modal-main-section {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 4px solid pink;
+}
+
+.modal-footer {
     background-color: white;
-    border: 2px solid pink;
-    border-radius: 5px;
-    outline: none;
-}
-
-.modal-header__button:active {
-    background-color: violet;
-    color: white;
 }
