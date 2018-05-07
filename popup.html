@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -10,194 +11,248 @@
 </head>
 
 <style>
-.wrapper {
-    width: 400px;
-    min-height: 400px;
-    overflow-x: hidden;
-    background-color: var(--main-bg-color);
-}
+    .wrapper {
+        width: 400px;
+        min-height: 400px;
+        overflow-x: hidden;
+        background-color: var(--main-bg-color-2);
+    }
 
-.modal-header {
-    color: var(--main-color);
-    cursor: default;
-}
+    .clock-init {
+        list-style: none;
+        margin: 0 35px;
+    }
 
-.clock-init {
-    list-style: none;
-    margin: 0 35px;
-}
+    .clock-h {
+        color: var(--main-bg-color);
+    }
 
-.clock-h {
-    color: gold;
-}
+    .clock-m {
+        color: violet;
+    }
 
-.clock-m {
-    color: violet;
-}
+    .clock-s {
+        color: var(--main-color);
+    }
 
-.clock-s {
-    color: var(--main-color);
-}
+    .clock {
+        width: 60px;
+        height: 60px;
+        border: 2px solid gold;
+        border-radius: 2px;
+        position: relative;
+        margin: auto;
+    }
 
-.clock {
-  width: 60px;
-  height: 60px;
-  border: 2px solid gold;
-  position: relative;
-  margin: auto;
-}
+    .clock-figure {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-3px);
+        /* account for the height of the clock hands */
+    }
 
-.clock-figure {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform: translateY(-3px); /* account for the height of the clock hands */
-}
+    .hand {
+        width: 22px;
+        height: 2px;
+        background: var(--main-color);
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform-origin: 100%;
+        transform: rotate(90deg);
+        transition: all 0.05s;
+        transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    }
 
-.hand {
-  width: 22px;
-  height: 2px;
-  background: var(--main-color);
-  position: absolute;
-  top:50%;
-  right: 50%;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  transition: all 0.05s;
-  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-}
+    .hand:nth-child(1) {
+        background: var(--main-bg-color);
+    }
 
-.hand:nth-child(1) {
-    background: gold;
-}
+    .hand:nth-child(2) {
+        background: violet;
+    }
 
-.hand:nth-child(2) {
-    background: violet;
-}
+    .hand:nth-child(3) {
+        background: var(--main-color);
+    }
 
-.hand:nth-child(3) {
-    background: var(--main-color);
-}
+    .col {
+        /* border: 1px solid pink; */
+    }
 
-.modal-main-section {
-    padding-left: 15px;
-    padding-right: 15px;
-    border-bottom: 4px solid pink;
-}
+    .container-fluid {
+        /* border: 2px solid var(--main-color); */
+    }
 
-.modal-footer {
-    background-color: white;
-}
-
-body {
-    /* box-sizing: content-box; */
-}
-
-.col {
-    /* border: 1px solid pink; */
-}
-
-.container-fluid {
-    /* border: 2px solid var(--main-color); */
-
-}
-
-.container-fluid h5 {
-    color: var(--main-color);
-    cursor: default;
-}
-
+    .container-fluid h5 {
+        color: var(--main-color);
+        cursor: default;
+    }
 </style>
 
 <body>
-<!-- container-fluid -->
-<div class="wrapper">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-7 align-self-center">
-                <h5>Social Network Launcher<br><small class="text-muted">Please you will choose category <br>or use search</small></h5>
-            </div>
-            <div class="col-4 align-self-center offset-1">
-                <ul class="clock-init list-inline md-0">
-                    <small><li class="clock-h list-inline-item">h</li></small>
-                    <small><li class="clock-m list-inline-item">m</li></small>
-                    <small><li class="clock-s list-inline-item">s</li></small>
-                </ul>
-                <div class="clock" style="margin-bottom: 5px;">
-                  <div class="clock-figure">
-                    <div class="hand h-hand"></div>
-                    <div class="hand m-hand"></div>
-                    <div class="hand s-hand"></div>
-                  </div>
+
+    <div class="wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-7 align-self-center">
+                    <h5>Social Network Launcher<br><small class="text-muted">Please you will choose category <br>or use search</small></h5>
                 </div>
-            </div>
-            <div class="w-100"></div>
-            <div class="col">
-                <div class="input-group mb-3" style="margin-top: 10px;">
-                    <input class="form-control mr-sm-1" placeholder="Search" aria-label="Search" type="text">
+                <div class="col-4 align-self-center offset-1">
+                    <ul class="clock-init list-inline md-0">
+                        <small><li class="clock-h list-inline-item">h</li></small>
+                        <small><li class="clock-m list-inline-item">m</li></small>
+                        <small><li class="clock-s list-inline-item">s</li></small>
+                    </ul>
+                    <div class="clock" style="margin-bottom: 5px;">
+                        <div class="clock-figure">
+                            <div class="hand h-hand"></div>
+                            <div class="hand m-hand"></div>
+                            <div class="hand s-hand"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <!-- <div class="input-group mb-3" style="margin-top: 10px;">
+                        <input class="form-control mr-sm-1" placeholder="Search" aria-label="Search" type="text">
                         <div class="input-group-append">
                             <button class="btn btn-outline-primary" type="button">Search</button>
                         </div>
+                    </div> -->
+                </div>
+                <div class="w-100"></div>
+                <div class="col">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist" style="border-bottom: 0;">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Git</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">2</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">3</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-f" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">4</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <table class="table table-sm table-dark table-hover">
+                                <caption><small>Git networks</small></caption>
+                                <thead class="bg-danger">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Icon</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="text-muted">1</th>
+                                        <td>BitBucket</td>
+                                        <td><i class="fab fa-bitbucket" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://bitbucket.org/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">2</th>
+                                        <td>GitHub</td>
+                                        <td><i class="fab fa-github" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://github.com/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">3</th>
+                                        <td>GitLab</td>
+                                        <td><i class="fab fa-gitlab" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://gitlab.com/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <table class="table table-sm table-dark table-hover">
+                                <caption>Список сетей</caption>
+                                <thead>
+                                    <tr class="bg-success">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Имя</th>
+                                        <th scope="col">Фамилия</th>
+                                        <th scope="col">w</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <table class="table table-sm table-dark table-hover">
+                                <caption>Список сетей</caption>
+                                <thead>
+                                    <tr class="bg-success">
+                                        <th scope="col">#</th>
+                                        <th scope="col">Имя</th>
+                                        <th scope="col">Фамилия</th>
+                                        <th scope="col">w</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="w-100"></div>
             <div class="col">
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#profile">Profile</a>
-                    </li>
-                </ul>
-                <div id="myTabContent" class="tsab-content">
-                    <div class="tab-pane fade show active" id="home">
-                        <table class="table table-sm table-dark table-hover">
-                            <caption>Список сетей</caption>
-                            <thead>
-                                <tr class="bg-success">
-                                    <th scope="col">#</th>
-                                    <th scope="col">Имя</th>
-                                    <th scope="col">Фамилия</th>
-                                    <th scope="col">w</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="tab-pane fade" id="profile">
-                        <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress.</p>
-                    </div>
-                </div>
+                <img src="icon_128.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px;">
+                <p class="text-muted"><small><strong>2018</strong> <i class="far fa-copyright"></i> Links to this extension: <a href="https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher" class="badge badge-info" target="_blank">BitBucket</a>  <a href="#" class="badge badge-light" target="_blank">GitHub</a></small></p>
             </div>
         </div>
-        <img src="icon_128.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px;"><p><small><strong>2018</strong> <i class="far fa-copyright"></i> Link to this extension: <a href="https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher">BitBucket</a></small></p>
     </div>
-</div>
 
-<script src="js/popup.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
 </body>
+
 </html>
