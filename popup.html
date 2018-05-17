@@ -77,14 +77,6 @@
         background: var(--main-color);
     }
 
-    .col {
-        /* border: 1px solid pink; */
-    }
-
-    .container-fluid {
-        /* border: 2px solid var(--main-color); */
-    }
-
     .container-fluid h5 {
         color: var(--main-color);
         cursor: default;
@@ -124,13 +116,13 @@
                 </div>
                 <div class="w-100"></div>
                 <div class="col">
-                    
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist" style="border-bottom: 0;">
                             <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Git</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">2</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">3</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-f" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">4</a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Sandbox</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Social</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-f" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">IT</a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-a" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Hostings</a>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
@@ -169,72 +161,144 @@
                         </div>
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <table class="table table-sm table-dark table-hover">
-                                <caption>Список сетей</caption>
-                                <thead>
-                                    <tr class="bg-success">
+                                <caption><small>Sandboxes / Snippets / Gists</small></caption>
+                                <thead class="bg-danger">
+                                    <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Имя</th>
-                                        <th scope="col">Фамилия</th>
-                                        <th scope="col">w</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Icon</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">1</th>
+                                        <td>Cacher</td>
+                                        <td><i class="fas fa-code" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://app.cacher.io/library/personal?snippet=9e4994dd1b44dc3fde98" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">2</th>
+                                        <td>GitHubGist</td>
+                                        <td><i class="fab fa-github-square" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://gist.github.com/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">3</th>
+                                        <td>Codepen</td>
+                                        <td><i class="fab fa-codepen" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://codepen.io/ProUnebit/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">4</th>
+                                        <td>JS fiddle</td>
+                                        <td><i class="fab fa-jsfiddle" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://jsfiddle.net/user/dashboard/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <table class="table table-sm table-dark table-hover">
-                                <caption>Список сетей</caption>
-                                <thead>
-                                    <tr class="bg-success">
+                                <caption><small>Social networks, video hosting services and another...</small></caption>
+                                <thead class="bg-danger">
+                                    <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Имя</th>
-                                        <th scope="col">Фамилия</th>
-                                        <th scope="col">w</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Icon</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th scope="row">1</th>
-                                        <td>Mark</td>
-                                        <td>Otto</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">1</th>
+                                        <td>Twitter</td>
+                                        <td><i class="fab fa-twitter" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://twitter.com/ProUnebit?lang=en" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">2</th>
-                                        <td>Jacob</td>
-                                        <td>Thornton</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">2</th>
+                                        <td>VK</td>
+                                        <td><i class="fab fa-vk" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://vk.com/id50275509" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">3</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">3</th>
+                                        <td>Google+</td>
+                                        <td><i class="fab fa-google-plus-g" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://plus.google.com/u/0/104161974863163552345" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
-                                        <th scope="row">4</th>
-                                        <td>Larry</td>
-                                        <td>the Bird</td>
-                                        <td><a href="#" role="button" class="btn btn-sm btn-outline-success">Посетить</a></td>
+                                        <th scope="row" class="text-muted">4</th>
+                                        <td>Reddit</td>
+                                        <td><i class="fab fa-reddit-alien" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://www.reddit.com/user/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">5</th>
+                                        <td>YouTube</td>
+                                        <td><i class="fab fa-youtube" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://www.youtube.com/channel/UCllxcSeVWW3XqPbNO7PJXgg?view_as=subscriber" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">6</th>
+                                        <td>Pinterest</td>
+                                        <td><i class="fab fa-pinterest" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://ru.pinterest.com/prounebit/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-f" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <table class="table table-sm table-dark table-hover">
+                                <caption><small>IT networks</small></caption>
+                                <thead class="bg-danger">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Icon</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="text-muted">1</th>
+                                        <td>Toster</td>
+                                        <td><i class="fas fa-text-height" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://toster.ru/user/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">2</th>
+                                        <td>Stack Overflow RU</td>
+                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://ru.stackoverflow.com/users/297616/prounebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row" class="text-muted">3</th>
+                                        <td>Stack Overflow EN</td>
+                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://stackoverflow.com/users/9807586/prounebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-a" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <table class="table table-sm table-dark table-hover">
+                                <caption><small>Hostings</small></caption>
+                                <thead class="bg-danger">
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Icon</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row" class="text-muted">1</th>
+                                        <td>Heroku</td>
+                                        <td><i class="fas fa-heading" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><a href="https://dashboard.heroku.com/apps" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
                             </table>
