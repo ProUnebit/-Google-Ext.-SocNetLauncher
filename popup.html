@@ -13,7 +13,7 @@
 <style>
     .wrapper {
         width: 400px;
-        min-height: 400px;
+        min-height: 320px;
         overflow-x: hidden;
         background-color: var(--main-bg-color-2);
     }
@@ -81,6 +81,16 @@
         color: var(--main-color);
         cursor: default;
     }
+
+    .nav-link[aria-selected="true"] {
+        background: gold !important;
+        border: transparent !important;
+        color: var(--main-bg-color-2) !important;
+    }
+
+    .nav-link:hover {
+        border-color: gold !important;
+    }
 </style>
 
 <body>
@@ -115,22 +125,22 @@
                     </div> -->
                 </div>
                 <div class="w-100"></div>
-                <div class="col">
+                <div class="col" style="margin-top: 15px">
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist" style="border-bottom: 0;">
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Git</a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Sandbox</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Social</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-f" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">IT</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-a" role="tab" aria-controls="nav-contact" aria-selected="false" style="background-color: var(--main-bg-color-2); color: var(--main-color)">Hostings</a>
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true"><small>Git</small></a>
+                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false"><small>Sandbox</small></a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false"><small>Social</small></a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-f" role="tab" aria-controls="nav-contact" aria-selected="false"><small>IT</small></a>
+                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-a" role="tab" aria-controls="nav-contact" aria-selected="false"><small>Hostings</small></a>
                         </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                             <table class="table table-sm table-dark table-hover">
                                 <caption><small>Git networks</small></caption>
-                                <thead class="bg-danger">
-                                    <tr>
+                                <thead>
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Icon</th>
@@ -141,19 +151,19 @@
                                     <tr>
                                         <th scope="row" class="text-muted">1</th>
                                         <td>BitBucket</td>
-                                        <td><i class="fab fa-bitbucket" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-bitbucket" style="font-size: 20px; margin-top: 5px; color: #0747A6"></i></td>
                                         <td><a href="https://bitbucket.org/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">2</th>
                                         <td>GitHub</td>
-                                        <td><i class="fab fa-github" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-github" style="font-size: 20px; margin-top: 5px; color: #FFFFFF"></i></td>
                                         <td><a href="https://github.com/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">3</th>
                                         <td>GitLab</td>
-                                        <td><i class="fab fa-gitlab" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-gitlab" style="font-size: 20px; margin-top: 5px; color: orange"></i></td>
                                         <td><a href="https://gitlab.com/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
@@ -162,8 +172,8 @@
                         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
                             <table class="table table-sm table-dark table-hover">
                                 <caption><small>Sandboxes / Snippets / Gists</small></caption>
-                                <thead class="bg-danger">
-                                    <tr>
+                                <thead>
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Icon</th>
@@ -174,25 +184,25 @@
                                     <tr>
                                         <th scope="row" class="text-muted">1</th>
                                         <td>Cacher</td>
-                                        <td><i class="fas fa-code" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fas fa-code" style="font-size: 20px; margin-top: 5px; color: #0DBF8E"></i></td>
                                         <td><a href="https://app.cacher.io/library/personal?snippet=9e4994dd1b44dc3fde98" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">2</th>
                                         <td>GitHubGist</td>
-                                        <td><i class="fab fa-github-square" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-github-square" style="font-size: 20px; margin-top: 5px;  color: gray"></i></td>
                                         <td><a href="https://gist.github.com/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">3</th>
                                         <td>Codepen</td>
-                                        <td><i class="fab fa-codepen" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-codepen" style="font-size: 20px; margin-top: 5px; color: whitesmoke"></i></td>
                                         <td><a href="https://codepen.io/ProUnebit/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">4</th>
                                         <td>JS fiddle</td>
-                                        <td><i class="fab fa-jsfiddle" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-jsfiddle" style="font-size: 20px; margin-top: 5px; color: #0867C0"></i></td>
                                         <td><a href="https://jsfiddle.net/user/dashboard/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
@@ -201,8 +211,8 @@
                         <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <table class="table table-sm table-dark table-hover">
                                 <caption><small>Social networks, video hosting services and another...</small></caption>
-                                <thead class="bg-danger">
-                                    <tr>
+                                <thead>
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Icon</th>
@@ -213,37 +223,37 @@
                                     <tr>
                                         <th scope="row" class="text-muted">1</th>
                                         <td>Twitter</td>
-                                        <td><i class="fab fa-twitter" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-twitter" style="font-size: 20px; margin-top: 5px; color: #1da1f2"></i></td>
                                         <td><a href="https://twitter.com/ProUnebit?lang=en" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">2</th>
                                         <td>VK</td>
-                                        <td><i class="fab fa-vk" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-vk" style="font-size: 20px; margin-top: 5px;  color: #4A76A8"></i></td>
                                         <td><a href="https://vk.com/id50275509" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">3</th>
                                         <td>Google+</td>
-                                        <td><i class="fab fa-google-plus-g" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-google-plus-g" style="font-size: 20px; margin-top: 5px;  color: silver"></i></td>
                                         <td><a href="https://plus.google.com/u/0/104161974863163552345" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">4</th>
                                         <td>Reddit</td>
-                                        <td><i class="fab fa-reddit-alien" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-reddit-alien" style="font-size: 20px; margin-top: 5px;  color: #FF4500"></i></td>
                                         <td><a href="https://www.reddit.com/user/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">5</th>
                                         <td>YouTube</td>
-                                        <td><i class="fab fa-youtube" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-youtube" style="font-size: 20px; margin-top: 5px;  color: #FF0000"></i></td>
                                         <td><a href="https://www.youtube.com/channel/UCllxcSeVWW3XqPbNO7PJXgg?view_as=subscriber" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">6</th>
                                         <td>Pinterest</td>
-                                        <td><i class="fab fa-pinterest" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-pinterest" style="font-size: 20px; margin-top: 5px;  color: #BD081C"></i></td>
                                         <td><a href="https://ru.pinterest.com/prounebit/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
@@ -252,8 +262,8 @@
                         <div class="tab-pane fade" id="nav-f" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <table class="table table-sm table-dark table-hover">
                                 <caption><small>IT networks</small></caption>
-                                <thead class="bg-danger">
-                                    <tr>
+                                <thead>
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Icon</th>
@@ -264,19 +274,19 @@
                                     <tr>
                                         <th scope="row" class="text-muted">1</th>
                                         <td>Toster</td>
-                                        <td><i class="fas fa-text-height" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fas fa-text-height" style="font-size: 20px; margin-top: 5px; color: #4F5A6E"></i></td>
                                         <td><a href="https://toster.ru/user/ProUnebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">2</th>
                                         <td>Stack Overflow RU</td>
-                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: #0077DD"></i></td>
                                         <td><a href="https://ru.stackoverflow.com/users/297616/prounebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
                                         <th scope="row" class="text-muted">3</th>
                                         <td>Stack Overflow EN</td>
-                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: var(--main-color-2)"></i></td>
+                                        <td><i class="fab fa-stack-overflow" style="font-size: 20px; margin-top: 5px;  color: #F59448"></i></td>
                                         <td><a href="https://stackoverflow.com/users/9807586/prounebit" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
@@ -285,8 +295,8 @@
                         <div class="tab-pane fade" id="nav-a" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <table class="table table-sm table-dark table-hover">
                                 <caption><small>Hostings</small></caption>
-                                <thead class="bg-danger">
-                                    <tr>
+                                <thead>
+                                    <tr class="table-active">
                                         <th scope="col">#</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Icon</th>
@@ -297,7 +307,7 @@
                                     <tr>
                                         <th scope="row" class="text-muted">1</th>
                                         <td>Heroku</td>
-                                        <td><i class="fas fa-heading" style="font-size: 20px; margin-top: 5px; color: var(--main-color-2)"></i></td>
+                                        <td><i class="fas fa-heading" style="font-size: 20px; margin-top: 5px; color: #BEA7D5"></i></td>
                                         <td><a href="https://dashboard.heroku.com/apps" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                 </tbody>
@@ -306,9 +316,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <img src="icon_128.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px;">
-                <p class="text-muted"><small><strong>2018</strong> <i class="far fa-copyright"></i> Links to this extension: <a href="https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher" class="badge badge-info" target="_blank">BitBucket</a>  <a href="#" class="badge badge-light" target="_blank">GitHub</a></small></p>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col align-self-end">
+                    <img src="icon_128.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px; margin-right: 15px;">
+                    <p class="text-muted"><small><strong>2018</strong> <i class="far fa-copyright"></i> Links to this extension: <a href="https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher" class="badge badge-info" target="_blank">BitBucket</a>  <a href="https://github.com/ProUnebit/Google-Ext.-SocNetLauncher" class="badge badge-light" target="_blank">GitHub</a></small></p>
+                </div>
             </div>
         </div>
     </div>
