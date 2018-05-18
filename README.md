@@ -1,3 +1,4 @@
+![Project Type](https://image.ibb.co/jWSrfd/pic_ext.jpg)
 
 ### Custom Google Chrome Extension
 **Project name:** *SocNetLauncher*
