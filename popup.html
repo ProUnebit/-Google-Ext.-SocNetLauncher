@@ -23,18 +23,6 @@
         margin: 0 35px;
     }
 
-    .clock-h {
-        color: var(--color-6);
-    }
-
-    .clock-m {
-        color: gold;
-    }
-
-    .clock-s {
-        color: var(--color-1);
-    }
-
     .clock {
         width: 60px;
         height: 60px;
@@ -55,7 +43,6 @@
     .hand {
         width: 22px;
         height: 2px;
-        background: var(--color-1);
         position: absolute;
         top: 50%;
         right: 50%;
@@ -63,23 +50,6 @@
         transform: rotate(90deg);
         transition: all 0.05s;
         transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-    }
-
-    .hand:nth-child(1) {
-        background: var(--color-6);
-    }
-
-    .hand:nth-child(2) {
-        background: gold;
-    }
-
-    .hand:nth-child(3) {
-        background: var(--color-1);
-    }
-
-    .container-fluid h5 {
-        color: var(--color-1);
-        cursor: default;
     }
 
     .nav-link[aria-selected="true"] {
@@ -99,19 +69,19 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-7 align-self-center">
-                    <h5>Social Network Launcher<br><small class="text-muted">Please you will choose category <br>or use search</small></h5>
+                    <h5 style="color: var(--color-1); cursor: default;">Social Network Launcher<br><small class="text-muted">Please you will choose category <br>or use search</small></h5>
                 </div>
                 <div class="col-4 align-self-center offset-1">
                     <ul class="clock-init list-inline md-0">
-                        <small><li class="clock-h list-inline-item">h</li></small>
-                        <small><li class="clock-m list-inline-item">m</li></small>
-                        <small><li class="clock-s list-inline-item">s</li></small>
+                        <small><li class="list-inline-item" style="color: var(--color-6);">h</li></small>
+                        <small><li class="list-inline-item" style="color: var(--color-7);">m</li></small>
+                        <small><li class="list-inline-item" style="color: var(--color-1);">s</li></small>
                     </ul>
                     <div class="clock" style="margin-bottom: 5px;">
                         <div class="clock-figure">
-                            <div class="hand h-hand"></div>
-                            <div class="hand m-hand"></div>
-                            <div class="hand s-hand"></div>
+                            <div class="hand" style="background: var(--color-6);"></div>
+                            <div class="hand m-hand" style="background: var(--color-7);"></div>
+                            <div class="hand s-hand" style="background: var(--color-1);"></div>
                         </div>
                     </div>
                 </div>
@@ -325,6 +295,10 @@
             </div>
         </div>
     </div>
+
+    <!-- Alex R. has created (ProUnebit@yandex.ru)
+    https://github.com/ProUnebit/Google-Ext.-SocNetLauncher
+    https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher -->
 
     <script src="js/popup.js"></script>
     <script src="js/jquery.min.js"></script>
