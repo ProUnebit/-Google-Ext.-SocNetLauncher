@@ -15,7 +15,7 @@
         width: 400px;
         min-height: 320px;
         overflow-x: hidden;
-        background-color: var(--main-bg-color-2);
+        background-color: var(--color-3);
     }
 
     .clock-init {
@@ -24,24 +24,25 @@
     }
 
     .clock-h {
-        color: var(--main-bg-color);
+        color: var(--color-6);
     }
 
     .clock-m {
-        color: violet;
+        color: gold;
     }
 
     .clock-s {
-        color: var(--main-color);
+        color: var(--color-1);
     }
 
     .clock {
         width: 60px;
         height: 60px;
-        border: 2px solid gold;
+        border: 2px solid var(--color-4);
         border-radius: 2px;
         position: relative;
         margin: auto;
+        background: linear-gradient(to top, #000000, #434343);
     }
 
     .clock-figure {
@@ -49,13 +50,12 @@
         width: 100%;
         height: 100%;
         transform: translateY(-3px);
-        /* account for the height of the clock hands */
     }
 
     .hand {
         width: 22px;
         height: 2px;
-        background: var(--main-color);
+        background: var(--color-1);
         position: absolute;
         top: 50%;
         right: 50%;
@@ -66,30 +66,30 @@
     }
 
     .hand:nth-child(1) {
-        background: var(--main-bg-color);
+        background: var(--color-6);
     }
 
     .hand:nth-child(2) {
-        background: violet;
+        background: gold;
     }
 
     .hand:nth-child(3) {
-        background: var(--main-color);
+        background: var(--color-1);
     }
 
     .container-fluid h5 {
-        color: var(--main-color);
+        color: var(--color-1);
         cursor: default;
     }
 
     .nav-link[aria-selected="true"] {
-        background: gold !important;
+        background: linear-gradient(to right, #ff416c, #ff4b2b);
         border: transparent !important;
-        color: var(--main-bg-color-2) !important;
+        color: var(--color-2) !important;
     }
 
     .nav-link:hover {
-        border-color: gold !important;
+        border-color: var(--color-5) !important;
     }
 </style>
 
@@ -190,7 +190,7 @@
                                     <tr>
                                         <th scope="row" class="text-muted">2</th>
                                         <td>GitHubGist</td>
-                                        <td><i class="fab fa-github-square" style="font-size: 20px; margin-top: 5px;  color: gray"></i></td>
+                                        <td><i class="fab fa-github-square" style="font-size: 20px; margin-top: 5px;  color: #868686"></i></td>
                                         <td><a href="https://gist.github.com/" role="button" class="btn btn-sm btn-outline-primary" target="_blank">To visit</a></td>
                                     </tr>
                                     <tr>
@@ -319,7 +319,7 @@
             <div class="row">
                 <div class="col-1"></div>
                 <div class="col align-self-end">
-                    <img src="icon-full-size.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px; margin-right: 10px;">
+                    <img src="icon_128.png" alt="logo" class="rounded float-left" style="width: 30px; height: 30px; margin-right: 10px;">
                     <p class="text-muted"><small><strong>2018</strong> <i class="far fa-copyright"></i> Links to this extension: <a href="https://bitbucket.org/ProUnebit/google-ext.-socnetlauncher" class="badge badge-info" target="_blank">BitBucket</a>  <a href="https://github.com/ProUnebit/Google-Ext.-SocNetLauncher" class="badge badge-light" target="_blank">GitHub</a></small></p>
                 </div>
             </div>
