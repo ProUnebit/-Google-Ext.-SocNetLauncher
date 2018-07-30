@@ -2,7 +2,7 @@
 
 ### Custom Google Chrome Extension
 **Project name:** *SocNetLauncher*
-
+- - -
 ![Project Type](https://preview.ibb.co/mfrkwT/icon_1033_size2.png)
 - - -
 Mail for communication: <ProUnebit@yandex.ru>
